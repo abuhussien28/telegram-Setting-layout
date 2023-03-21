@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- string uses in task  -->
+    <string name="name">Ali Mohamed</string>
+    <string name="status">Online</string>
+    <string name="username">\@AliMohamed</string>
+    <string name="Privacy">Privacy and Security</string>
+    <string name="notificationAndSounds">Notification and Sounds</string>
+    <string name="dataAndStorage">Data and Storage</string>
+    <string name="powerSaving">Power Saving</string>
+    <string name="chatFolders">Chat Folders</string>
+    <string name="devices">Devices</string>
+    <string name="Language">Language</string>
+    <string name="LanguageOne">English</string>
+    <string name="askAQuestion">Ask a Question</string>
+    <string name="telegramFAQ">Telegram FAQ</string>
+    <string name="privacyPolicy">Privacy Policy</string>
+    <string name="version">Telegram for Android v9.5.2 (3208) store bundied arm64-v8a</string>
+</resources>
