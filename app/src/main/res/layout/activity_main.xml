@@ -46,7 +46,7 @@
         />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/profileImg"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_150sdp"
         android:src="@drawable/profile_img"
@@ -64,11 +64,11 @@
         android:text="@string/name"
         android:textColor="@color/white"
         android:textSize="@dimen/_16sdp"
-        app:layout_constraintBottom_toBottomOf="@id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@id/profileImg"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/status"
@@ -78,13 +78,13 @@
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/cameraIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
         android:backgroundTint="@color/color_title"
         android:src="@drawable/camera"
-        app:layout_constraintBottom_toBottomOf="@id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@id/profileImg"
         app:layout_constraintEnd_toEndOf="parent" />
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll"
@@ -92,7 +92,7 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/profileImg"
         app:layout_constraintEnd_toEndOf="parent"
         >
         <LinearLayout
@@ -117,13 +117,13 @@
                     android:paddingBottom="@dimen/_4sdp"
                     android:paddingStart="@dimen/_8sdp"
                     android:textColor="#6AB2F2"
-                    android:textSize="@dimen/_16sdp" />
+                    android:textSize="28sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background"
-                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingStart="@dimen/_7sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
 
                     android:orientation="vertical">
@@ -132,7 +132,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_4sdp"
                         android:text="+01550905520"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -140,7 +140,7 @@
                         android:layout_height="wrap_content"
                         android:text="Tap to change phone number"
                         android:textColor="@color/color_white_70opacity"
-                        android:textSize="@dimen/_8sdp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -156,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_4sdp"
                         android:text="@string/username"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -164,7 +164,7 @@
                         android:layout_height="wrap_content"
                         android:text="Username"
                         android:textColor="@color/color_white_70opacity"
-                        android:textSize="@dimen/_8sdp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -179,24 +179,22 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_4sdp"
                         android:text="you bio"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:textColor="@color/white" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bio"
                         android:textColor="@color/color_white_70opacity"
-                        android:textSize="@dimen/_8sdp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginTop="@dimen/_8sdp"
                 android:orientation="vertical">
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -205,7 +203,7 @@
                     android:paddingBottom="@dimen/_4sdp"
                     android:text="Settings"
                     android:textColor="@color/color_title"
-                    android:textSize="@dimen/_16sdp" />
+                    android:textSize="28sp" />
                 <LinearLayout
                     android:background="@drawable/background"
                     android:layout_width="match_parent"
@@ -224,7 +222,7 @@
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginBottom="@dimen/_8sdp"
                         android:text="chat Settings"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -247,7 +245,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_8sdp"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:text="@string/Privacy"
                         android:textColor="@color/white" />
                 </LinearLayout>
@@ -271,7 +269,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginBottom="@dimen/_4sdp"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:text="@string/notificationAndSounds"
                         android:textColor="@color/white" />
                 </LinearLayout>
@@ -296,7 +294,7 @@
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginBottom="@dimen/_4sdp"
                         android:text="@string/dataAndStorage"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -318,7 +316,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginBottom="@dimen/_4sdp"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:text="@string/powerSaving"
                         android:textColor="@color/white" />
                 </LinearLayout>
@@ -343,7 +341,7 @@
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginBottom="@dimen/_4sdp"
                         android:text="@string/chatFolders"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -366,7 +364,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginBottom="@dimen/_4sdp"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:text="@string/devices"
                         android:textColor="@color/white" />
                 </LinearLayout>
@@ -391,13 +389,13 @@
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginBottom="@dimen/_4sdp"
                         android:text="@string/Language"
-                        android:textSize="@dimen/_14sdp"
+                        android:textSize="20sp"
                         android:textColor="@color/white" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_170sdp"
+                        android:layout_marginStart="@dimen/_160sdp"
                         android:text="@string/LanguageOne"
                         android:textColor="@color/color_title" />
                 </LinearLayout>
@@ -423,7 +421,7 @@
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:text="Telegram Premium"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -438,7 +436,7 @@
                     android:paddingBottom="@dimen/_8sdp"
                     android:text="Help"
                     android:textColor="@color/color_title"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="28sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -458,9 +456,9 @@
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginBottom="@dimen/_4sdp"
                         android:text="@string/askAQuestion"
+                        android:textSize="20sp"
                         android:textColor="@color/white" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -502,6 +500,7 @@
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginBottom="@dimen/_4sdp"
                         android:text="@string/privacyPolicy"
+                        android:textSize="20sp"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -511,6 +510,7 @@
                     android:text="@string/version"
                     android:textColor="@color/color_white_70opacity"
                     android:background="#232E3C"
+               android:layout_marginBottom="@dimen/_4sdp"
                     />
             </LinearLayout>
         </LinearLayout>
