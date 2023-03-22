@@ -18,7 +18,9 @@
         app:layout_constraintStart_toEndOf="@id/arrow"
             app:layout_constraintTop_toTopOf="@id/arrow"
             android:id="@+id/profileImg"
-            android:layout_marginStart="8dp" />
+            android:layout_marginStart="8dp" >
+            <CustomAttribute app:attributeName="roundPercent" app:customFloatValue="1"/>
+        </Constraint>
         <Constraint
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
