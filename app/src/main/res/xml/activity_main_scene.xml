@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+<!-- layout will expanded to show profile img in big size -->
+    <ConstraintSet android:id="@+id/expanded">
+
+        <Constraint
+            android:id="@+id/imageCircle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/RectangleImageView"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            />
+        <Constraint
+            android:id="@+id/imageShape"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:visibility="visible"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintEnd_toStartOf="@id/iv_more"
+            app:layout_constraintTop_toTopOf="@id/iv_back" />
+        <Constraint
+            android:id="@+id/name_and_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="@id/avatar_rectangle"
+            app:layout_constraintStart_toStartOf="@id/avatar_rectangle" />
+    </ConstraintSet>
+    <!-- layout will return  to no Expanded this mean profile img became in small size -->
+    <ConstraintSet android:id="@+id/noExpanded" />
+    <!-- scroll to see content in bottom   -->
+    <ConstraintSet android:id="@+id/scroll">
+        <Constraint
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_56sdp"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/imageCircle"
+            android:layout_width="@dimen/_44sdp"
+            android:layout_height="@dimen/_44sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/RoundedImageView"
+            motion:layout_constraintBottom_toBottomOf="@id/iv_back"
+            motion:layout_constraintStart_toEndOf="@id/iv_back"
+            motion:layout_constraintTop_toTopOf="@id/iv_back" />
+
+        <Constraint
+            android:id="@+id/iv_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:translationZ="1dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintEnd_toStartOf="@id/iv_search"
+            app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+        <Constraint
+            android:id="@+id/btn_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/app_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar" />
+
+    </ConstraintSet>
+    <Transition
+        motion:autoTransition="none"
+        motion:constraintSetEnd="@+id/scroll"
+        motion:constraintSetStart="@+id/noExpanded">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/app_bar"
+            motion:touchAnchorSide="bottom" />
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/expanded"
+        motion:constraintSetStart="@+id/noExpanded">
+        <OnSwipe
+            motion:dragDirection="dragDown"
+            motion:touchAnchorId="@+id/app_bar"
+            motion:touchAnchorSide="bottom" />
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="95"
+                motion:motionTarget="@+id/imageShape" />
+
+            <KeyAttribute
+                android:alpha="1"
+               motion:framePosition="100"
+                motion:motionTarget="@+id/imageShape" />
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>
